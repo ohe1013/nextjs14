@@ -1,5 +1,6 @@
 import Link from "next/link";
-
+import Movie from "../../../src/components/movie";
+import styles from "../../../styles/home.module.css";
 const URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 async function getMovies() {
@@ -8,14 +9,17 @@ async function getMovies() {
   return data;
 }
 
-export default async function Movie(props) {
+export default async function MoviePage(props) {
   const movies = await getMovies();
   return (
-    <div>
+    <div className={styles.container}>
       {movies.map((movie) => (
-        <p>
-          <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
-        </p>
+        <Movie
+          key={movie.id}
+          id={movie.id}
+          poster_path={movie.poster_path}
+          title={movie.title}
+        ></Movie>
       ))}
     </div>
   );
