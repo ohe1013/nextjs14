@@ -1,7 +1,3 @@
 {
-  "/(movies)/movies/page": "app/(movies)/movies/page.js",
-  "/(home)/page": "app/(home)/page.js",
-  "/(movies)/movies/[id]/page": "app/(movies)/movies/[id]/page.js",
-  "/(home)/home/page": "app/(home)/home/page.js",
-  "/(home)/home/child/page": "app/(home)/home/child/page.js"
+  "/(movies)/movies/[id]/page": "app/(movies)/movies/[id]/page.js"
 }
